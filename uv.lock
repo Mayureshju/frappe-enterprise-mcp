@@ -228,6 +228,7 @@ source = { editable = "." }
 dependencies = [
     { name = "httpx" },
     { name = "mcp", extra = ["cli"] },
+    { name = "pydantic" },
     { name = "pydantic-settings" },
 ]
 
@@ -242,7 +243,8 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "httpx", specifier = ">=0.28.1" },
-    { name = "mcp", extras = ["cli"], specifier = ">=2.3.0" },
+    { name = "mcp", extras = ["cli"], specifier = ">=2.3.0,<3" },
+    { name = "pydantic", specifier = ">=2.12" },
     { name = "pydantic-settings", specifier = ">=2.16.0" },
 ]
 

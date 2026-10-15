@@ -47,7 +47,10 @@ def main() -> int:
                             params={"fields": '["name"]', "limit_page_length": 1})
             print("GET ToDo list status:", r2.status_code)
             if r2.status_code == 403:
-                print("User lacks ToDo read permission; set restricted test permissions or choose an allowed test DocType.")
+                print(
+                    "User lacks ToDo read permission; set restricted test permissions"
+                    " or choose an allowed test DocType."
+                )
                 return 1
             r2.raise_for_status()
             print("PASS: Frappe API connection works using a restricted user.")
